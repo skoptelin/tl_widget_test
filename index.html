@@ -15,10 +15,10 @@
         fjs.parentNode.insertBefore(js, fjs)
       }(window, document, "script", "tlc", "./widget.js"))
       tlc("init", {
-        debug: true, // debug mode
+        debug: false, // debug mode
         // idRootElement: "tlc-wrapper", // id of the widget add root element optional
         // element: el, // HTML element of the widget add root element optional
-        minimized: false, // is collapsed at start
+        minimized: true, // is collapsed at start
 
         serviceBaseUrl: "https://tlcamp-api.tlcamp.nikkin.site", // url api server dev new
          campId: "419342c7-c8ca-4b48-a1fa-5f7241ec85f0", // id camp
@@ -26,7 +26,27 @@
         // serviceBaseUrl: "https://tlcamp-api.campdirector.ru", // api prod
         // campId: "756e6ab4-bf56-4e30-83d6-34ca0f7d0caa", // id camp
         styles: {
-            stileInString:  null
+            stileInString:  "  --color-text: #251e06;" +
+                "  --color-text-header: #ffffff;"  +
+                "  --color-text-sm: #898989;" +
+                "  --color-accent: rgba(237,125,39,1);" +
+                "  --color-error: #cb2431;" +
+                "  --color-bg: #fff;" +
+                "  --color-bg-conatiner: #333333AA;" +
+                "  --color-bg-secondary: #fff;" +
+                "  --color-button-text: #251e06;" +
+                "  --color-button-fill: rgba(237,125,39,1);" +
+                "  --color-button-line: #ffffff;" +
+                "  --color-inputs: rgba(237,125,39,1);" +
+                "  --color-inputs-text: #251e06;" +
+                "  --color-inputs-placeholder: #898989;" +
+                "  --color-inputs-bg: #fff;" +
+                "  --border-radius: 9px;" +
+                "  --btn-cite-right: 50px;" +
+                "  --btn-cite-bottom: 50px;" +
+                "  --btn-cite-top: none;" +
+                "  --btn-cite-index: 10001;" +
+                "  --wrapper-cite-index: 10000;"
         }
       })
     </script>
