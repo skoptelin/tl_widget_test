@@ -21,7 +21,7 @@
         minimized: true, // is collapsed at start
 
         serviceBaseUrl: "https://tlcamp-api.tlcamp.nikkin.site", // url api server dev new
-         campId: "93a8c18a-bd6a-41bc-9f1c-48b4c3862dd2", // id camp
+         campId: "419342c7-c8ca-4b48-a1fa-5f7241ec85f0", // id camp
 
         // serviceBaseUrl: "https://tlcamp-api.campdirector.ru", // api prod
         // campId: "756e6ab4-bf56-4e30-83d6-34ca0f7d0caa", // id camp
@@ -49,6 +49,9 @@
                 "  --btn-mob-cite-bottom: 100px;",
         },
         openingButtons: '.campbox_button',
+        mainButton: {
+          hidden: true
+        },
       })
     </script>
 
@@ -102,6 +105,10 @@
               //weight: "400"
             }
         },
+        text: {
+          searchFormTitle: "Выбор программы",
+          voucherDetailsTitle: "Детали программы"
+        },
         openingButtons: '.t396__elem[data-elem-id="1622986986995"],.t-btn[data-buttonfieldset="button2"],.t776__btn-wrapper.t-btn_sm',
         metrics: {
           id: 102997595,
@@ -115,7 +122,10 @@
           idPostfix: "Second",
           hidden: true
         },
-        changes: ["e9d89881-d839-4b6f-b78d-9d7a569f6f16", "be8447cd-b2c8-4056-85a0-d094a4bcc8d2"]
+        changes: {
+          ids: ["e9d89881-d839-4b6f-b78d-9d7a569f6f16", "be8447cd-b2c8-4056-85a0-d094a4bcc8d2"],
+          type: "courses"
+        }
       })
     </script>
 
@@ -189,7 +199,7 @@
       }
     </style>
     <div class="button_box">
-      <button class="t396__elem" data-elem-id="1622986986995">Кнопка 1</button>
+      <button class="campbox_button" data-elem-id="1622986986995">Кнопка 1</button>
       <button class="t-btn" id="button2" data-buttonfieldset="button2">Кнопка 2</button>
       <button class="campbox_button">Кнопка 3</button>
       <button class="t776__btn-wrapper t-btn_sm">Кнопка 4</button>
