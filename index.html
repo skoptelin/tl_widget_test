@@ -21,14 +21,14 @@
         minimized: true, // is collapsed at start
 
         serviceBaseUrl: "https://tlcamp-api.campbox.tech", // url api server dev new
-         campId: "419342c7-c8ca-4b48-a1fa-5f7241ec85f0", // id camp
+         campId: "", // id camp
 
         // serviceBaseUrl: "https://tlcamp-api.campdirector.ru", // api prod
         // campId: "756e6ab4-bf56-4e30-83d6-34ca0f7d0caa", // id camp
         styles: {
             stileInString:
-                "  --color-text-header: #ffffff;"  +
-                "  --color-text-sm: #898989;" +
+                "  --color-text-header: #ffff;"  +
+                "  --color-text-sm: #FFCD24;" +
                 "  --color-accent: #FFCD24;" +
                 "  --color-error: #cb2431;" +
                 "  --color-bg: #fff;" +
@@ -42,8 +42,8 @@
                 "  --color-inputs-placeholder: #898989;" +
                 "  --color-inputs-bg: #fff;" +
                 "  --border-radius: 30px;" +
-                "  --btn-cite-right: 80px;" +
-                "  --btn-cite-bottom: 60px;" +
+                "  --btn-cite-right: 50px;" +
+                "  --btn-cite-bottom: 50px;" +
                 "  --btn-cite-top: unset;" +
                 "  --btn-cite-index: 10001;" +
                 "  --font-family: Montserrat Alternates;" +
@@ -57,19 +57,13 @@
         metrics: {
           id: 105447003,
         },
-        form: {
-          fields: {
-            transferList: [
-              "Трансфер не нужен - Привезем ребенка сами",
-              "Трансфер из Челябинска",
-              "*Трансфер из Екатеринбурга (при наборе группы от 10 человек)",
-              "*Трансфер из Магнитогорска (при наборе группы от 10 человек)",
-            ]
-          }
-        },
-        onlineChat: {
-          turnOn: true,
-          onlineChatId: '4859'
+        camps: {
+          campList: [
+            { id: "419342c7-c8ca-4b48-a1fa-5f7241ec85f0", label: "Мартовские Коты" },
+            { id: "93a8c18a-bd6a-41bc-9f1c-48b4c3862dd2", label: "Великие Утюги" },
+            { id: "a2f0e64a-8ada-4697-a42a-db71cfe99ea5", label: "Импульс" },
+            { id: "bc95b64e-6868-4b8e-861a-4df58e782ec1", label: "Без смен" },
+          ]
         }
       })
     </script>
