@@ -96,10 +96,24 @@
     <div class="button_box">
         <button class="t396__elem" data-elem-id="1622986986995">Кнопка 1</button>
         <button class="t-btn" id="button2" data-buttonfieldset="button2">Кнопка 2</button>
-        <a href="/?partnerId=СВОИ&widgetOpen=true">Кнопка 3</a>
+        <a href="#" id="link1">Кнопка 3</a>
         <button class="t776__btn-wrapper t-btn_sm">Кнопка 4</button>
-        <a href="/?partnerId=Джалиль&widgetOpen=true">Кнопка 5</a>
+        <a href="#" id="link2">Кнопка 5</a>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const link1 = document.getElementById('link1');
+            const link2 = document.getElementById('link2');
+            const url1 = new URL(window.location.href);
+            const url2 = new URL(window.location.href);
+            url1.searchParams.set('partnerId', 'СВОИ');
+            url1.searchParams.set('widgetOpen', 'true');
+            url2.searchParams.set('partnerId', 'Джалиль');
+            url2.searchParams.set('widgetOpen', 'true');
+            link1.href = url1.toString();
+            link2.href = url2.toString();
+        });
+    </script>
     <div style="width: 100%; display: flex; justify-content: center; margin-top: 20px; align-items: center;">
       <span style="color: rgb(255, 255, 255); margin-right: 10px;">Партнёр платформы</span>
       <a href="https://camp-box.ru/" target="_blank" rel="noreferrer noopener">
