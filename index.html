@@ -13,93 +13,57 @@
         js.src = f
         js.async = 1
         fjs.parentNode.insertBefore(js, fjs)
-      }(window, document, "script", "tlc", "./widget.js"))
-      tlc("init", {
-        debug: true, // debug mode
-        // idRootElement: "tlc-wrapper", // id of the widget add root element optional
-        // element: el, // HTML element of the widget add root element optional
-        minimized: true, // is collapsed at start
-
-        serviceBaseUrl: "https://tlcamp-api.campbox.tech", // url api server dev new
-        oauthVkIdLink: "https://lk.campbox.tech/vkid",
-        // campId: "419342c7-c8ca-4b48-a1fa-5f7241ec85f0", // id camp
-
+        }(window, document, "script", "tlc", "https://widget.campdirector.ru/widget_camp_main.js"))
+        tlc("init", {
+        debug: false,
+        minimized: true,
+        serviceBaseUrl: "https://tlcamp-api.campdirector.ru",
+        holdingCompanyId: "d8a360eb-6325-447f-a4e2-9c63432052b3",
         styles: {
-            stileInString:
-                "  --color-text-header: #ffff;"  +
-                "  --color-text-sm: #898989;" +
-                "  --color-accent: #FFCD24;" +
-                "  --color-error: #cb2431;" +
-                "  --color-bg: #fff;" +
-                "  --color-bg-conatiner: #333333AA;" +
-                "  --color-bg-secondary: #FFCD24;" +
-                "  --color-button-text: #251e06;" +
-                "  --color-button-fill: #FFCD24;" +
-                "  --color-button-line: #ffffff;" +
-                "  --color-inputs: #FFCD24;" +
-                "  --color-inputs-text: #000000;" +
-                "  --color-inputs-placeholder: #898989;" +
-                "  --color-inputs-bg: #fff;" +
-                "  --border-radius: 30px;" +
-                "  --btn-cite-right: 80px;" +
-                "  --btn-cite-bottom: 60px;" +
-                "  --btn-cite-top: unset;" +
-                "  --btn-cite-index: 10001;" +
-                // "  --btn-account-right: 50px;" +
-                // "  --btn-account-left: 50px;" +
-                // "  --btn-account-bottom: 50px;" +
-                // "  --btn-account-top: 50px;" +
-                // "  --btn-mob-account-right: 200px;" +
-                // "  --btn-mob-account-left: 50px;" +
-                // "  --btn-mob-account-bottom: 50px;" +
-                // "  --btn-mob-account-top: 50px;" +
-                // "  --account-icon-color: green;" +
-                "  --btn-account-index: 22222px;" +
-                "  --font-family: Montserrat Alternates;" +
-                "  --btn-mob-cite-bottom: 100px;",
-            font: {
-              name: "Montserrat+Alternates",
-              //weight: "400"
-            }
+          stileInString:
+            "  --color-text-header: #ffff;" +
+            "  --color-button-text: #ffff;" +
+            "  --color-accent: #004b8e;" +
+            "  --color-bg-secondary: #004b8e;" +
+            "  --color-button-fill: red;" +
+            "  --color-loader: #004b8e;" +
+            "  --color-inputs: #004b8e;" +
+            "  --btn-cite-right: 80px;" +
+            "  --btn-cite-bottom: 60px;" +
+            "  --border-radius: 3px;" +
+            "  --font-family: 'Open Sans', sans-serif;",
         },
-        openingButtons: '.t396__elem[data-elem-id="1622986986995"],.t-btn[data-buttonfieldset="button2"],.t776__btn-wrapper.t-btn_sm',
+        changes: {
+            ids: [
+              "35d63c40-f88e-482c-86fd-acc1127c69c2",
+              "33c2e540-edb7-4566-87b3-2175f6684a53",
+              "f6b06376-06f8-4a93-95a9-7a3e931961bf",
+              "9c9a198c-2b24-4f14-903b-e4999c913842",
+              "6f1e5e2c-531f-4d14-a1ab-52aae5765837",
+              "9bb1ba1a-78a9-4daa-a297-b22b3b06c5ea",
+              "e3e1452c-7a79-4bb5-9d64-58f5075adbe1",
+              "ebb19048-7eaf-49ea-b12c-4a8b69b20cf2"
+            ],
+          type: "courses",
+        },
         metrics: {
-          id: 105447003,
-          urlUtm: true,
+          id: 109189413
         },
-        // vouchers: {
-        //   hideWaitingList: true,
-        //   visibleIds: {
-        //     "d7231160-7052-41a5-9ae5-ca1841f257d1": ["9f40eb13-82e5-49cf-b5d0-b92a124da2c7", "a5055a0a-72a8-488f-961d-60253099f8cf"],
-        //     "6e90cbfe-3c0b-4852-b2e4-45b8da81be99": ["8308e244-dcd1-4ae3-94da-428fc363cbbb"],
-        //   }
-        // },
-        /* changes: {
-          ids: ["d7231160-7052-41a5-9ae5-ca1841f257d1", "6e90cbfe-3c0b-4852-b2e4-45b8da81be99"],
-        }, */
-        holdingCompanyId: "a4d90505-493d-41fc-8b3b-f15209f7fca4",
-        // partner: {
-        //   popupOn: true,
-        //   popupAutoOpen: true,
-        //   popupButtonText: "У меня есть ID спец программы",
-        //   popupObjectText: "ID спец программы"
-        // },
-        // switchPartnerIdByPath: {
-        //   turnOn: true,
-        //   partnerAndPathMapping: {
-        //     "СВОИ": ["/"],
-        //     "Джалиль": ["/jalil"]
-        //   },
-        //   defaultPartnerId: "ДЕФОЛТ",
-        //   switchButtonText: "Кастомный текст кнопки"
-        // }
-        accountButton: {
+        switchPartnerIdByPath: {
           turnOn: true,
-          // text: "текст кнопки ЛК",
-          // tooltipTitle: "текст заголовка всплывашки",
-          // tooltipText: "текст всплывашки",
-          // tooltipPlacement: "top",
+          defaultPartnerId: "ves_16",
+          switchButtonOn: true,
         },
+        form: {
+          fields: {
+            promocode: {
+              hidden: true,
+              exstraField: {
+                turnOn: true,
+              }
+            }
+          }
+        }
       })
     </script>
   </head>
