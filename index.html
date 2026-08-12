@@ -1,115 +1,26 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="ru">
   <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
-    <script>
-      (function (w, d, s, o, f, js, fjs) {
-        w[o] = w[o] || function () {
-          (w[o].q = w[o].q || []).push(arguments)
-        }
-        js = d.createElement(s), fjs = d.getElementsByTagName(s)[0]
-        js.id = o
-        js.src = f
-        js.async = 1
-        fjs.parentNode.insertBefore(js, fjs)
-        }(window, document, "script", "tlc", "./widget.js"))
-        tlc("init", {
-        debug: false,
-        minimized: true,
-        serviceBaseUrl: "https://tlcamp-api.campdirector.ru",
-        holdingCompanyId: "d8a360eb-6325-447f-a4e2-9c63432052b3",
-        styles: {
-          stileInString:
-            "  --color-text-header: #ffff;" +
-            "  --color-button-text: #ffff;" +
-            "  --color-accent: #004b8e;" +
-            "  --color-bg-secondary: #004b8e;" +
-            "  --color-button-fill: red;" +
-            "  --color-loader: #004b8e;" +
-            "  --color-inputs: #004b8e;" +
-            "  --btn-cite-right: 80px;" +
-            "  --btn-cite-bottom: 60px;" +
-            "  --border-radius: 3px;" +
-            "  --font-family: 'Open Sans', sans-serif;",
-        },
-        changes: {
-            ids: [
-              "35d63c40-f88e-482c-86fd-acc1127c69c2",
-              "33c2e540-edb7-4566-87b3-2175f6684a53",
-              "f6b06376-06f8-4a93-95a9-7a3e931961bf",
-              "9c9a198c-2b24-4f14-903b-e4999c913842",
-              "6f1e5e2c-531f-4d14-a1ab-52aae5765837",
-              "9bb1ba1a-78a9-4daa-a297-b22b3b06c5ea",
-              "e3e1452c-7a79-4bb5-9d64-58f5075adbe1",
-              "ebb19048-7eaf-49ea-b12c-4a8b69b20cf2"
-            ],
-          type: "courses",
-        },
-        metrics: {
-          id: 109189413
-        },
-        switchPartnerIdByPath: {
-          turnOn: true,
-          defaultPartnerId: "ves_16",
-          switchButtonOn: true,
-        },
-        form: {
-          fields: {
-            promocode: {
-              hidden: true,
-              exstraField: {
-                turnOn: true,
-              }
-            }
-          }
-        }
-      })
-    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CampBox v2 QA</title>
   </head>
   <body>
-    <style>
-      .button_box {
-        position: fixed;
-        display: flex;
-        flex-direction: column;
-        top: 50%;
-        left: 50%;
-      }
-      .button_box button,
-      .button_box a {
-        height: 48px;
-        border: 1px solid black;
-        margin-bottom: 20px;
-        cursor: pointer;
-      }
-    </style>
-    <div class="button_box">
-        <button class="t396__elem" data-elem-id="1622986986995">Кнопка 1</button>
-        <button class="t-btn" id="button2" data-buttonfieldset="button2">Кнопка 2</button>
-        <a href="#" id="link1">Кнопка 3</a>
-        <button class="t776__btn-wrapper t-btn_sm">Кнопка 4</button>
-        <a href="#" id="link2">Кнопка 5</a>
-    </div>
+    <h1>Host page (QA)</h1>
+    <div id="campbox-booking"></div>
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const link1 = document.getElementById('link1');
-            const link2 = document.getElementById('link2');
-            const url1 = new URL(window.location.href);
-            const url2 = new URL(window.location.href);
-            url1.searchParams.set('partnerId', 'СВОИ');
-            url1.searchParams.set('widgetOpen', 'true');
-            url2.searchParams.set('partnerId', 'Джалиль');
-            url2.searchParams.set('widgetOpen', 'true');
-            link1.href = url1.toString();
-            link2.href = url2.toString();
-        });
+      window.tlc =
+        window.tlc ||
+        function () {
+          ;(window.tlc.q = window.tlc.q || []).push(arguments)
+        }
+      tlc("init", {
+        debug: true,
+        holdingCompanyId: "a4d90505-493d-41fc-8b3b-f15209f7fca4",
+        theme: { scheme: "green" },
+        accountButton: { turnOn: true },
+      })
     </script>
-    <div style="width: 100%; display: flex; justify-content: center; margin-top: 20px; align-items: center;">
-      <span style="color: rgb(255, 255, 255); margin-right: 10px;">Партнёр платформы</span>
-      <a href="https://camp-box.ru/" target="_blank" rel="noreferrer noopener">
-        <img src="https://storage.yandexcloud.net/campdir-public/ad8c3330-ee1a-41cc-a372-767added9148/6b76e4e6-1d46-4498-81b1-4ddafd3b7411.png" alt="" style="max-width: 130px; object-fit: contain;">
-      </a>
-    </div>
+    <script type="module" src="./loader.js"></script>
   </body>
 </html>
