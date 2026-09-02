@@ -1,1 +1,0 @@
-function e(e,t){if(!t)return e;let n={...e??{},...t};return`promoCode`in t&&t.promoCode!==(e?.promoCode??null)&&(n.promoDescription=t.promoDescription??null),n}export{e as t};
